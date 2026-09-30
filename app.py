@@ -52,12 +52,12 @@ Question:
 {question}
 """
 
-    try:
-        result = client.models.generate_content(
-            model="gemini-3.8-flash",
-            contents=prompt
-        )
-        st.write(result.text)
-    
-    except Exception:
-        st.write("I couldn't find that information in the uploaded PDF.")
+        try:
+            result = client.models.generate_content(
+                model="gemini-3.8-flash",
+                contents=prompt
+            )
+            st.write(result.text)
+        
+        except Exception:
+            st.write("I couldn't find that information in the uploaded PDF.")
